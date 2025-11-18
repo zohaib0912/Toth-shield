@@ -20,7 +20,7 @@ const Contact = ({
             <BreadCrumb sub_title={subTitle} title={title} />
             
             {/* Contact Section */}
-            <section className="section-space">
+            <section className="section-space wow fadeInUp">
                <div className="small-container">
                   <div className="row">
                      <div className="col-lg-5 mb-40">

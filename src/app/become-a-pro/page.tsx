@@ -38,7 +38,7 @@ const BecomeAPro = () => {
             <main>
                 {/* Hero Section - Full Width Video Background */}
                 <section
-                    className="p-relative"
+                    className="p-relative wow fadeInUp"
                     style={{
                         height: isMobile ? 'auto' : '100vh',
                         minHeight: isMobile ? 'auto' : '600px',
@@ -331,7 +331,7 @@ const BecomeAPro = () => {
                 
 
                 {/* What Your Clients Experience Section */}
-                <section className="service-tab-section section-space bg-color-1 p-relative is-dark">
+                <section className="service-tab-section section-space bg-color-1 p-relative is-dark wow fadeInUp">
                     <div className="bg-image" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-35.png)` }}></div>
          <div className="bg-shape-1" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-33.png)` }}></div>
          <div className="bg-shape-2" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-34.png)` }}></div>
@@ -468,7 +468,7 @@ const BecomeAPro = () => {
                 </section>
 
                 {/* What Your Agency Gets Section */}
-                <section className="section-space p-relative" style={{ paddingTop: '70px !important', paddingBottom: '120px !important' }}>
+                <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '70px !important', paddingBottom: '120px !important' }}>
                     <style dangerouslySetInnerHTML={{__html: `
                         .agency-gets-section .team-area-box {
                             transition: none !important;
@@ -728,7 +728,7 @@ const BecomeAPro = () => {
                
 
                 {/* White-Label Branding Section */}
-                <section className="section-space p-relative" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
+                 <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
                     <div className="small-container">
                     <div className="text-center mb-30">
                             <span className="section-sub-title" style={{ color: '#ea1826' }}>White Label Branding</span>
@@ -910,7 +910,7 @@ const BecomeAPro = () => {
                 </section>
 
                  {/* Emergency Button Flow Section */}
-                 <section className="section-space p-relative" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
+                 <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
                     <style dangerouslySetInnerHTML={{__html: `
                         .emergency-flow-section .work-process-box {
                             transition: none !important;
@@ -1151,7 +1151,7 @@ const BecomeAPro = () => {
                 </section>
 
                 {/* Pricing & ROI Section */}
-                <section className="section-space p-relative" style={{paddingTop: '0px !important', paddingBottom: '100px !important' }}>
+                <section className="section-space p-relative wow fadeInUp" style={{paddingTop: '0px !important', paddingBottom: '100px !important' }}>
                     <div className="small-container">
                         <div className="text-center mb-40">
                             <span className="section-sub-title" style={{ color: '#ea1826', textTransform: 'uppercase', letterSpacing: '1px' }}>Pricing & ROI</span>
@@ -1293,7 +1293,7 @@ const BecomeAPro = () => {
                 </section>
 
                 {/* Who It's For Section */}
-                <section className="section-space p-relative" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
+                <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
                     <div className="small-container">
                         <div className="text-center mb-50">
                             <span className="section-sub-title" style={{ color: '#ea1826', textTransform: 'uppercase', letterSpacing: '1px' }}>
@@ -1361,7 +1361,7 @@ const BecomeAPro = () => {
                 <Testimonial />
 
                 {/* Ecosystem & Integrations Section */}
-                <section className="section-space p-relative" style={{ paddingTop: '70px !important' , paddingBottom: '70px !important' }}>
+                <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '70px !important' , paddingBottom: '70px !important' }}>
                     <div className="small-container">
                         <div className="row align-items-center">
                             <div className="col-lg-7">

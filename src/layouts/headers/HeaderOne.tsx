@@ -44,8 +44,8 @@ const HeaderOne = () => {
                            </div>
                            <div className="header-action d-none d-xl-inline-flex gap-5">
                               <div className="header-link">
-                              <Link className="primary-btn-1 btn-hover" href="/contact">
-                                    GET A QUOTE &nbsp; | <i className="icon-right-arrow"></i>
+                              <Link className="primary-btn-1 btn-hover" href="#">
+                                    Login &nbsp; | <i className="icon-right-arrow"></i>
                                     <span style={{ top: "147.172px", left: "108.5px" }}></span>
                                  </Link>
                               </div>

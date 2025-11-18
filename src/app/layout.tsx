@@ -1,4 +1,5 @@
 import "../styles/index.css";
+import ScrollAnimationProvider from "@/components/common/ScrollAnimationProvider";
 
 export default function RootLayout({
   children,
@@ -21,6 +22,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
       </head>
       <body suppressHydrationWarning={true}>
+        <ScrollAnimationProvider />
         {children}
       </body>
     </html>

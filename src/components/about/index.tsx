@@ -31,7 +31,7 @@ const About = () => {
             <BreadCrumb sub_title="About" title="About Toth Shield" />
             
             {/* Video Section */}
-            <section className="section-space">
+            <section className="section-space wow fadeInUp">
                <div className="small-container">
                   <div className="row align-items-center g-4">
                      <div className="col-lg-6">
@@ -64,7 +64,7 @@ const About = () => {
             </section>
 
             {/* Mission Section */}
-            <section className="section-space service-tab-section bg-color-1 p-relative is-dark text-white" style={{ position: 'relative', overflow: 'hidden' }}>
+            <section className="section-space service-tab-section bg-color-1 p-relative is-dark text-white wow fadeInUp" style={{ position: 'relative', overflow: 'hidden' }}>
                <div className="bg-image" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-35.png)` }}></div>
                <div className="bg-shape-1" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-33.png)` }}></div>
                <div className="bg-shape-2" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-34.png)` }}></div>
@@ -117,7 +117,7 @@ const About = () => {
             </section>
 
             {/* Company Intro Section */}
-            <section className="section-space" style={{paddingTop: '70px !important'}}>
+            <section className="section-space wow fadeInUp" style={{paddingTop: '70px !important'}}>
                <div className="small-container">
                   <div className="row g-4 mb-50">
                      <div className="col-md-5">

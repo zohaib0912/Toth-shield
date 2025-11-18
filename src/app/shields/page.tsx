@@ -184,7 +184,7 @@ const ShieldsPage = () => {
             <main>
                 {/* Hero Section - Full Width Video Background */}
                 <section
-                    className="p-relative"
+                className="p-relative wow fadeInUp"
                     style={{
                         height: isMobile ? 'auto' : '100vh',
                         minHeight: isMobile ? 'auto' : '600px',
@@ -329,7 +329,7 @@ const ShieldsPage = () => {
                 </section>
 
                 {/* Packages Section */}
-                <section id="packages" className="section-space" style={{ paddingBottom: "0px !important" }}>
+                <section id="packages" className="section-space wow fadeInUp" style={{ paddingBottom: "0px !important" }}>
                     <div className="small-container">
                         <div className="text-center mb-60">
                             <span className="section-sub-title">Membership Plans</span>
