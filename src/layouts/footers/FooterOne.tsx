@@ -1,5 +1,5 @@
 "use client"
-import Image, { StaticImageData } from "next/image"
+import Image  from "next/image"
 import Link from "next/link"
 
 import logo_1 from "@/assets/imgs/logo/toth-logo-white.png"
