@@ -3,7 +3,7 @@ import Link from "next/link";
 import Count from "@/components/common/Count";
 
 import about_1 from "@/assets/imgs/toth/about-1.png"
-import about_2 from "@/assets/imgs/toth/about-2.png"
+
 
 interface DataType {
    sub_title: string;
