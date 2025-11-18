@@ -32,7 +32,7 @@ const FooterOne = () => {
                         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                            <div className="footer-widget-1">
                               <figure className="image">
-                                 <Image src={logo_1} alt="" />
+                                 <Image src={logo_1} alt="Toth Shield logo" style={{ maxWidth: "300px", height: "auto" }} />
                               </figure>
                               <p className="mt-40 mb-30">
                                  Toth Shield delivers proactive roof monitoring, storm preparation, and homeowner support
@@ -54,20 +54,19 @@ const FooterOne = () => {
                                  <li><Link href="/">Home</Link></li>
                                  <li><Link href="/#shields">Shields</Link></li>
                                  <li><Link href="/become-a-pro">For Agents</Link></li>
-                                 <li><Link href="/free-hail-report">Free Hail Report</Link></li>
                                  <li><Link href="/contact">Contact Us</Link></li>
                               </ul>
                            </div>
                         </div>
                         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                            <div className="footer-widget-2 pl-50">
-                              <h4 className="mb-30 footer-title">Membership Benefits</h4>
+                              <h4 className="mb-30 footer-title">Resources</h4>
                               <ul className="service-list">
-                                 <li><Link href="/services">Roof Health Reports</Link></li>
-                                 <li><Link href="/services">Emergency Tarping</Link></li>
-                                 <li><Link href="/services">Storm Monitoring</Link></li>
-                                 <li><Link href="/services">Insurance Support</Link></li>
-                                 <li><Link href="/services">Agent Portal Access</Link></li>
+                                 <li><Link href="/free-hail-report">Free Hail Report</Link></li>
+                                 <li><Link href="/terms-of-services">Terms of Service</Link></li>
+                                 <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                 <li><Link href="/refund-cancellation-policy">Refund &amp; Cancellation</Link></li>
+                                 <li><Link href="/legal-notice">Legal Notice</Link></li>
                               </ul>
                            </div>
                         </div>
