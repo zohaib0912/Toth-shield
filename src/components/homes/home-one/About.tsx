@@ -60,7 +60,7 @@ const About = ({ style }: PropType) => {
                      <figure className="main-image m-img">
                         <Image src={about_1} alt="" style={{height: '500px'}}/>
                      </figure>
-                     <div 
+                     {/* <div 
                         className="small-image small-image-mobile-hide" 
                         style={{ 
                           bottom: '40px !important',
@@ -72,7 +72,7 @@ const About = ({ style }: PropType) => {
                         }}
                      >
                         <Image src={about_2} alt="" />
-                     </div>
+                     </div> */}
                      <div className="icon-box">
                         <div className="icon">
                            <i className="icon-prize-1"></i>
