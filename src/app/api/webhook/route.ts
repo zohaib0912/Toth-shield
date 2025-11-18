@@ -4,12 +4,16 @@ import Stripe from "stripe";
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
 if (!stripeSecretKey) {
-  throw new Error("Missing STRIPE_SECRET_KEY environment variable");
+  console.warn(
+    "[webhook] Missing STRIPE_SECRET_KEY; returning 500 instead of throwing so build can succeed."
+  );
 }
 
-const stripe = new Stripe(stripeSecretKey, {
-  apiVersion: "2024-06-20" as Stripe.LatestApiVersion,
-});
+const stripe = stripeSecretKey
+  ? new Stripe(stripeSecretKey, {
+      apiVersion: "2024-06-20" as Stripe.LatestApiVersion,
+    })
+  : null;
 
 export const runtime = "nodejs";
 
@@ -21,6 +25,13 @@ export async function POST(request: Request) {
     return NextResponse.json(
       { error: "Webhook signature verification failed" },
       { status: 400 }
+    );
+  }
+
+  if (!stripe) {
+    return NextResponse.json(
+      { error: "Stripe is not configured" },
+      { status: 500 }
     );
   }
 

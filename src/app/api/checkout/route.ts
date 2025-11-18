@@ -4,12 +4,16 @@ import Stripe from "stripe";
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
 if (!stripeSecretKey) {
-  throw new Error("Missing STRIPE_SECRET_KEY environment variable");
+  console.warn(
+    "[checkout] Missing STRIPE_SECRET_KEY; returning 500 instead of throwing so build can succeed."
+  );
 }
 
-const stripe = new Stripe(stripeSecretKey, {
-  apiVersion: "2024-06-20" as Stripe.LatestApiVersion,
-});
+const stripe = stripeSecretKey
+  ? new Stripe(stripeSecretKey, {
+      apiVersion: "2024-06-20" as Stripe.LatestApiVersion,
+    })
+  : null;
 
 const planPriceMap: Record<string, string> = {
   bronzeMonthly: "price_1SRsVL3Qpm2OW8htSrWEj1Eo",
@@ -24,6 +28,13 @@ const planPriceMap: Record<string, string> = {
 
 export async function POST(request: Request) {
   try {
+    if (!stripe) {
+      return NextResponse.json(
+        { error: "Stripe is not configured" },
+        { status: 500 }
+      );
+    }
+
     const { planKey } = await request.json();
 
     if (!planKey || typeof planKey !== "string") {
