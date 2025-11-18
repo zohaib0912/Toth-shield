@@ -3,14 +3,11 @@ import BreadCrumb from "../common/BreadCrumb"
 import HeaderOne from "@/layouts/headers/HeaderOne"
 import FooterOne from "@/layouts/footers/FooterOne"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 import HelpForm from "../homes/home-one/HelpForm"
 import about_3 from "@/assets/imgs/toth/2.jpeg"
 import about_4 from "@/assets/imgs/toth/3.jpeg"
 
 const About = () => {
-   const router = useRouter();
-
    const missionHighlights = [
       "Reliable Protection",
       "No Hidden Costs",
@@ -87,7 +84,7 @@ const About = () => {
                         </p>
 
                         <div className="row g-3">
-                           {missionHighlights.map((item, index) => (
+                      {missionHighlights.map((item) => (
                               <div className="col-6" key={item}>
                                  <div className="d-flex align-items-center gap-2">
                                     <span style={{ width: '8px', height: '8px', backgroundColor: '#fff', borderRadius: '50%', display: 'inline-block' }}></span>

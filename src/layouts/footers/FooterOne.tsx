@@ -1,30 +1,24 @@
 "use client"
 import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
-import Lightbox from "yet-another-react-lightbox"
-import { useState } from "react"
 
 import logo_1 from "@/assets/imgs/logo/toth-logo-white.png"
-import gallery_1 from "@/assets/imgs/footer/footer-1.png"
-import gallery_2 from "@/assets/imgs/footer/footer-2.png"
-import gallery_3 from "@/assets/imgs/footer/footer-3.png"
-import gallery_4 from "@/assets/imgs/footer/footer-4.png"
-
-const gallery_data: StaticImageData[] = [gallery_1, gallery_2, gallery_3, gallery_4];
+// import Lightbox from "yet-another-react-lightbox"
+// import { useState } from "react"
 
 const FooterOne = () => {
 
-   const [open, setOpen] = useState(false)
-   const [index, setIndex] = useState(0)
+//    const [open, setOpen] = useState(false)
+//    const [index, setIndex] = useState(0)
 
-   const handleOpen = (i: number) => {
-      setIndex(i)
-      setOpen(true)
-   }
+//    const handleOpen = (i: number) => {
+//       setIndex(i)
+//       setOpen(true)
+//    }
 
-   const slides = gallery_data.map((img) => ({
-      src: img.src,
-   }))
+//    const slides = gallery_data.map((img) => ({
+//       src: img.src,
+//    }))
 
    return (
       <>
@@ -116,7 +110,7 @@ const FooterOne = () => {
                </div>
             </div>
          </footer>
-         <Lightbox
+         {/* <Lightbox
             open={open}
             close={() => setOpen(false)}
             slides={slides}
@@ -124,7 +118,7 @@ const FooterOne = () => {
             on={{
                view: ({ index }) => setIndex(index),
             }}
-         />
+         /> */}
       </>
    )
 }

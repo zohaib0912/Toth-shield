@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import FooterOne from "@/layouts/footers/FooterOne";
 import Wrapper from "@/layouts/Wrapper";
@@ -14,7 +14,7 @@ import platinum_img from "@/assets/imgs/toth/platinum-shield.png"
 
 interface ShieldPackage {
     id: number;
-    thumb: any;
+    thumb: StaticImageData;
     title: string;
     desc: string;
     list: string[];

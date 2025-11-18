@@ -11,7 +11,6 @@ import HelpForm from "@/components/homes/home-one/HelpForm";
 
 const BecomeAPro = () => {
     const router = useRouter();
-    const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
     const [isMobile, setIsMobile] = useState(false);
     const [isLaptop, setIsLaptop] = useState(false);
 
@@ -31,101 +30,7 @@ const BecomeAPro = () => {
         };
     }, []);
 
-    const toggleAccordion = (index: number) => {
-        setActiveAccordion(activeAccordion === index ? null : index);
-    };
-
-    const features = [
-        {
-            icon: "icon-trending-up",
-            title: "Recurring Revenue",
-            description: "Build predictable income with annual memberships and ongoing service opportunities.",
-        },
-        {
-            icon: "icon-team",
-            title: "Qualified Leads",
-            description: "Access homeowners who are already interested in roof protection and maintenance.",
-        },
-        {
-            icon: "icon-dollar-tag",
-            title: "Competitive Commission",
-            description: "Earn attractive commissions on every membership you sell plus referral bonuses.",
-        },
-        {
-            icon: "icon-clock",
-            title: "Quick Setup",
-            description: "Get started in days, not months. Simple onboarding and comprehensive training provided.",
-        },
-        {
-            icon: "icon-shield",
-            title: "Marketing Support",
-            description: "Access professional marketing materials, co-branded content, and sales tools.",
-        },
-        {
-            icon: "icon-check-circle",
-            title: "Proven System",
-            description: "Join a network of successful agents using our tested business model.",
-        },
-    ];
-
-    const benefits = [
-        "Access to proprietary roof inspection and monitoring platform",
-        "Co-branded marketing materials and digital assets",
-        "Dedicated partner portal for managing your clients",
-        "Monthly training webinars and ongoing support",
-        "Exclusive territory opportunities in select markets",
-        "Performance bonuses and growth incentives",
-    ];
-
-    const steps = [
-        {
-            number: "01",
-            title: "Apply Online",
-            description: "Complete our simple partnership application. We'll review your qualifications and contact you within 48 hours.",
-        },
-        {
-            number: "02",
-            title: "Complete Training",
-            description: "Attend our comprehensive virtual training session to learn about Toth Shield, our platform, and sales best practices.",
-        },
-        {
-            number: "03",
-            title: "Get Certified",
-            description: "Pass the certification exam and receive your partner credentials, marketing materials, and access to the partner portal.",
-        },
-        {
-            number: "04",
-            title: "Start Selling",
-            description: "Begin offering Toth Shield to your clients. We provide ongoing support and resources to help you succeed.",
-        },
-    ];
-
-    const faqs = [
-        {
-            question: "Who can become a Toth Shield partner agent?",
-            answer: "Licensed insurance agents, home warranty professionals, real estate agents, and roofing contractors are ideal candidates. You should have an active client base in the homeowner market.",
-        },
-        {
-            question: "What are the commission rates?",
-            answer: "Partners earn competitive commissions on every membership sold, plus ongoing residual income for renewals. Exact rates are provided during the application process. We also offer performance bonuses for high-volume partners.",
-        },
-        {
-            question: "Is there a cost to become a partner?",
-            answer: "There is no upfront cost to join the Toth Shield partner program. We provide all necessary marketing materials and training at no charge. You simply need to maintain your professional licenses and certifications.",
-        },
-        {
-            question: "How much training is required?",
-            answer: "Initial training consists of a 2-hour virtual session covering our platform, products, and sales techniques. Ongoing training webinars are offered monthly and are optional but recommended.",
-        },
-        {
-            question: "Can I offer Toth Shield alongside my existing services?",
-            answer: "Absolutely! Most of our partners offer Toth Shield as a complementary service to their existing business. It's an excellent add-on for insurance agents, real estate professionals, and home service providers.",
-        },
-        {
-            question: "What support do partners receive?",
-            answer: "Partners receive dedicated support including: access to our partner portal, marketing materials, sales training, technical support, and a dedicated partner success manager for high-volume agents.",
-        },
-    ];
+   
 
     return (
         <Wrapper>
@@ -250,7 +155,7 @@ const BecomeAPro = () => {
                                                 <span style={{ top: "147.172px", left: "108.5px" }}></span>
                                             </button>
                                             <button 
-                                                onClick={() => document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' })} 
+                                                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} 
                                                 className="primary-btn-4 btn-hover"
                                                 style={{
                                                     width: isMobile ? '100%' : 'auto',
@@ -261,7 +166,7 @@ const BecomeAPro = () => {
                                                 <span style={{ top: "147.172px", left: "108.5px" }}></span>
                                             </button>
                                             <button 
-                                                onClick={() => document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' })} 
+                                                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} 
                                                 className="primary-btn-4 btn-hover"
                                                 style={{
                                                     width: isMobile ? '100%' : 'auto',
@@ -370,7 +275,7 @@ const BecomeAPro = () => {
                 </section> */}
 
                 {/* How It Works Section */}
-                <section className="section-space" style={{paddingTop: '70px !important', paddingBottom: '70px !important'}}>
+                <section id="how-it-works" className="section-space" style={{paddingTop: '70px !important', paddingBottom: '70px !important'}}>
                     <style dangerouslySetInnerHTML={{__html: `
                        
                         .how-it-works-section .section-sub-title {
@@ -810,7 +715,7 @@ const BecomeAPro = () => {
                                                 width: 'fit-content',
                                                 margin: '0 auto 10px'
                                             }}>
-                                                Offer something big-name carriers and direct writers don't: a branded protection platform.
+                                                Offer something big-name carriers and direct writers don&rsquo;t: a branded protection platform.
                                             </span>
                                         </div>
                                     </div>
@@ -1022,7 +927,7 @@ const BecomeAPro = () => {
                             <span className="section-sub-title">Emergency Button Flow</span>
                             <h2 className="section-title mt-10">The Emergency Button: From Panic to Protected in 60 Seconds</h2>
                             <p className="mt-20" style={{ fontSize: '18px', maxWidth: '900px', margin: '20px auto 0', lineHeight: '1.7' }}>
-                                When something goes wrong, your clients don't search for a policy number. They tap your agency's emergency button—and Harbor Shield 360 does the rest.
+                                When something goes wrong, your clients don&rsquo;t search for a policy number. They tap your agency&rsquo;s emergency button—and Harbor Shield 360 does the rest.
                             </p>
                         </div>
                         <div className="row g-4 position-relative justify-content-center" style={{ display: 'flex', flexWrap: 'wrap' }}>

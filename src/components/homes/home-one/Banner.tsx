@@ -68,10 +68,10 @@ const Banner = () => {
                            <h1 className="banner-title">{item.title}</h1>
                            <p className="banner-text">{item.desc}</p>
                            <div className="banner-btn-area-2">
-                              <a className="primary-btn-1 btn-hover" href="/shields">
+                              <Link className="primary-btn-1 btn-hover" href="/shields">
                                  VIEW SHIELDS &nbsp; | <i className="icon-right-arrow"></i>
                                  <span style={{ top: "147.172px", left: "108.5px" }}></span>
-                              </a>
+                              </Link>
                               <div className="round-image-area">
                                  <div className="image-1">
                                     <Image src={client_img} alt="" />
