@@ -96,15 +96,12 @@ const FooterOne = () => {
                         <span>© 2025 <Link href="/">Toth Shield</Link>. All rights reserved.</span>
                      </div>
                      <div className="footer-socials p-relative">
-                        <span><Link href="https://www.facebook.com/profile.php?id=100088916094011" target="_blank"><i className="fab fa-facebook-f"></i></Link></span>
-                        <span><Link href="https://twitter.com" target="_blank"><i className="fab fa-twitter"></i></Link></span>
-                        <span><Link href="#"><i className="fab fa-linkedin-in"></i></Link></span>
-                        <span><Link href="https://www.youtube.com/@Bimini-Boating" target="_blank"><i className="fab fa-youtube"></i></Link></span>
+                        <span><Link href="" target="_blank"><i className="fab fa-facebook-f"></i></Link></span>
+                        <span><Link href="" target="_blank"><i className="fab fa-twitter"></i></Link></span>
+                        <span><Link href=""><i className="fab fa-linkedin-in"></i></Link></span>
+                        <span><Link href="" target="_blank"><i className="fab fa-youtube"></i></Link></span>
                      </div>
-                     <div className="right-area p-relative">
-                        <span><Link href="/terms-of-services">Terms & Conditions</Link></span>
-                        <span><Link href="/privacy-policy">Privacy Policy</Link></span>
-                     </div>
+                     
                   </div>
                </div>
             </div>

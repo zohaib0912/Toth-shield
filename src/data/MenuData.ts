@@ -40,6 +40,11 @@ const menu_data: MenuItem[] = [
         has_dropdown: true,
         sub_menus: [
             { link: "/free-hail-report", title: "Free Hail Report" },
+            { link: "/industries-we-serve", title: "Industries We Serve" },
+            {
+                link: "/resources/harbor-shield-360-insurance-pricing",
+                title: "Harbor Shield 360 – Insurance Agency Pricing",
+            },
             { link: "/terms-of-services", title: "Terms of Service" },
             { link: "/privacy-policy", title: "Privacy Policy" },
             { link: "/refund-cancellation-policy", title: "Refund & Cancellation" },
