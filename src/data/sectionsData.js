@@ -11,7 +11,7 @@ const sectionsData = [
       "Tools that keep clients calling you first when something happens",
     ],
     ctaLabel: "View Agency Plans & Pricing",
-    ctaLink: "/industries/insurance-agencies",
+    ctaLink: "#",
     image: "/assets/imgs/industries/Business-agency.jpg",
   },
   {
@@ -26,8 +26,8 @@ const sectionsData = [
       "Keeps your dealership on the customer’s phone long after the sale",
     ],
     ctaLabel: "Explore Dealer Solutions",
-    ctaLink: "/industries/automotive-dealers",
-    image: "/assets/imgs/industries/automotive.jpg",
+    ctaLink: "#",
+    image: "/assets/imgs/industries/Automotive.jpg",
   },
   {
     label: "Property Management Companies",
@@ -41,7 +41,7 @@ const sectionsData = [
       "Branded experience that positions your company as proactive and protective",
     ],
     ctaLabel: "Explore Property Solutions",
-    ctaLink: "/industries/property-management",
+    ctaLink: "#",
     image: "/assets/imgs/industries/property.jpg",
   },
   {
@@ -56,8 +56,8 @@ const sectionsData = [
       "Optional integration with preferred roofers and service partners",
     ],
     ctaLabel: "Explore Real Estate Solutions",
-    ctaLink: "/industries/real-estate-teams",
-    image: "/assets/imgs/industries/broker.jpg",
+    ctaLink: "#",
+    image: "/assets/imgs/industries/Broker.jpg",
   },
   {
     label: "Builders & Contractors",
@@ -71,7 +71,7 @@ const sectionsData = [
       "Option to co-brand with insurance agencies or real estate partners",
     ],
     ctaLabel: "Explore Builder Solutions",
-    ctaLink: "/industries/builders-contractors",
+    ctaLink: "#",
     image: "/assets/imgs/industries/builder.png",
   },
 ];
