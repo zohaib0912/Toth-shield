@@ -45,6 +45,10 @@ const menu_data: MenuItem[] = [
                 link: "/resources/harbor-shield-360-insurance-pricing",
                 title: "Harbor Shield 360 – Insurance Agency Pricing",
             },
+            {
+                link: "/resources/toth-shield-consumer-pricing",
+                title: "Toth Shield – Consumer Pricing",
+            },
             { link: "/terms-of-services", title: "Terms of Service" },
             { link: "/privacy-policy", title: "Privacy Policy" },
             { link: "/refund-cancellation-policy", title: "Refund & Cancellation" },
