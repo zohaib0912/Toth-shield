@@ -40,9 +40,13 @@ const Process = ({ style }: PropType) => {
                <h3 className="section-title mt-10">A Simple, Proven Protection Process</h3>
             </div>
             <div className="row g-4">
-               {process_data.map((item) => (
+               {process_data.map((item, index) => (
                   <div key={item.id} className="col-xxl-4 col-xl-4 col-lg-4">
-                     <div className="work-process-box text-center ">
+                     <div
+                        className="work-process-box text-center"
+                        data-anim="fade-up"
+                        data-anim-delay={`${0.2 + index * 0.1}s`}
+                     >
                         <div className="icon-box p-relative">
                            <i className={item.icon}></i>
                            <span>{item.id}</span>

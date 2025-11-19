@@ -29,7 +29,11 @@ const Testimonial = () => {
          <div className="small-container">
             <div className="row">
                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-                  <div className="contact-from p-relative">
+                  <div
+                     className="contact-from p-relative"
+                     data-anim="slide-right"
+                     data-anim-delay="0.2s"
+                  >
                      <div className="title-box mb-40 wow fadeInLeft" data-wow-delay=".5s">
                         <span className="section-sub-title text-white">MEMBERSHIP SUPPORT</span>
                         <h3 className="section-title mt-10 text-white">Stay Ahead of the Next Storm</h3>
@@ -38,7 +42,11 @@ const Testimonial = () => {
                   </div>
                </div>
                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-                  <div className="testimonials-area">
+                  <div
+                     className="testimonials-area"
+                     data-anim="fade-up"
+                     data-anim-delay="0.3s"
+                  >
                      <div className="title-box mb-40 wow fadeInLeft" data-wow-delay=".5s">
                         <span className="section-sub-title">Testimonials</span>
                         <h3 className="section-title mt-10">Members Trust Toth Shield</h3>

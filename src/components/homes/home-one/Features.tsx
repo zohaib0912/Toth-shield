@@ -45,9 +45,13 @@ const Features = ({ style }: PropType) => {
          <div className="bg-shape-2" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-28.png)` }}></div>
          <div className="small-container">
             <div className="row g-4">
-               {feature_data.map((item) => (
+               {feature_data.map((item, index) => (
                   <div key={item.id} className="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
-                     <div className={`features-box-area p-relative wow fadeInLeft ${style ? "bg-color-3" : ""}`} data-wow-delay="500ms">
+                     <div
+                        className={`features-box-area p-relative ${style ? "bg-color-3" : ""}`}
+                        data-anim="fade-up"
+                        data-anim-delay={`${0.2 + index * 0.1}s`}
+                     >
                         <div className="shape-1" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-24.png)` }}></div>
                         <div className="shape-2" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-25.png)` }}></div>
                         <div className="shape-3" style={{ backgroundImage: `url(/assets/imgs/shapes/shape-26.png)` }}></div>

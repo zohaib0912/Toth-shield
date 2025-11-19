@@ -214,12 +214,18 @@ const Service = ({ style }: PropType) => {
                      order: isMobile ? 1 : undefined,
                   }}
                >
-                  <div className="service-tab-details-area">
+                  <div
+                     className="service-tab-details-area"
+                     data-anim="fade-up"
+                     data-anim-delay="0.3s"
+                  >
                      <div className="tab-content" id="myTabContent">
                         {service_data.map((item, index) => (
                            <div key={item.id} className={`tab-pane fade ${currentActiveTab === index ? 'show active' : ''}`} id="modified-roofing-tab-pane">
                               <div
                                  className="service-tab-content p-relative"
+                                 data-anim="fade-up"
+                                 data-anim-delay="0.35s"
                                  style={
                                     isLaptop
                                        ? {

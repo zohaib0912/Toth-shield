@@ -10,12 +10,20 @@ const HelpForm = () => {
          <div className="small-container">
             <div className="row">
                <div className="col-xxl-4 col-xl-4 col-lg-4">
-                  <div className="image-area w-img">
+                  <div
+                     className="image-area w-img"
+                     data-anim="slide-left"
+                     data-anim-delay="0.15s"
+                  >
                      <Image src={img1} alt="" style={{ width: '735px' }}/>
                   </div>
                </div>
                <div className="col-xxl-8 col-xl-8 col-lg-8">
-                  <div className="help-form-area">
+                  <div
+                     className="help-form-area"
+                     data-anim="fade-up"
+                     data-anim-delay="0.25s"
+                  >
                      <h3 className="section-title mb-40 text-white">Need Help Protecting Your Roof?</h3>
                      <div className="inner p-relative">
                         <form onSubmit={(e) => e.preventDefault()}>

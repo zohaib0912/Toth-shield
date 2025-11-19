@@ -51,9 +51,13 @@ const Counter = ({ style }: PropType) => {
       >
          <div className="small-container">
             <div className="row g-4">
-               {counter_data.map((item) => (
+               {counter_data.map((item, index) => (
                   <div key={item.id} className="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
-                     <div className="icon-box-counter-area">
+                     <div
+                        className="icon-box-counter-area"
+                        data-anim="fade-up"
+                        data-anim-delay={`${0.15 + index * 0.1}s`}
+                     >
                         <div className="icon-box">
                            <i className={item.icon}></i>
                         </div>

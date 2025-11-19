@@ -57,9 +57,13 @@ const Blog = ({ style }: PropType) => {
                </Link>
             </div>
             <div className="row g-4">
-               {blog_data.filter((items) => items.page === "home_1").map((item) => (
+               {blog_data.filter((items) => items.page === "home_1").map((item, index) => (
                   <div key={item.id} className={item.col}>
-                     <div className={`blog-style-two ${item.class}`}>
+                     <div
+                        className={`blog-style-two ${item.class}`}
+                        data-anim="fade-up"
+                        data-anim-delay={`${0.2 + index * 0.1}s`}
+                     >
                         {item.thumb &&
                            <Link className="blog-image w-img" href="/blog-details">
                               <Image src={item.thumb ? item.thumb : ""} alt="" />

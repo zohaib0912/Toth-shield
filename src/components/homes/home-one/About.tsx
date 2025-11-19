@@ -56,7 +56,11 @@ const About = ({ style }: PropType) => {
          <div className="small-container">
             <div className="row">
                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-                  <div className="about-2-image-area p-relative wow fadeInLeft" data-wow-delay="500ms">
+                  <div
+                     className="about-2-image-area p-relative"
+                     data-anim="slide-right"
+                     data-anim-delay="0.2s"
+                  >
                      <figure className="main-image m-img">
                         <Image src={about_1} alt="" style={{height: '500px'}}/>
                      </figure>
@@ -86,8 +90,12 @@ const About = ({ style }: PropType) => {
                   </div>
                </div>
                <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-                  <div className="about-2-content-area pl-50">
-                     <div className="title-box mb-35 wow fadeInRight" data-wow-delay=".5s">
+                  <div
+                     className="about-2-content-area pl-50"
+                     data-anim="fade-up"
+                     data-anim-delay="0.3s"
+                  >
+                     <div className="title-box mb-35">
                         <span className="section-sub-title">{sub_title}</span>
                         <h3 className="section-title mt-10">{title}</h3>
                      </div>
