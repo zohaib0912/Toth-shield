@@ -52,8 +52,9 @@ const FooterOne = () => {
                               <h4 className="mb-30 footer-title">Quick Links</h4>
                               <ul className="service-list">
                                  <li><Link href="/">Home</Link></li>
-                                 <li><Link href="/#shields">Shields</Link></li>
+                                 <li><Link href="/shields">Shields</Link></li>
                                  <li><Link href="/become-a-pro">For Agents</Link></li>
+                                 <li><Link href="/about">About</Link></li>
                                  <li><Link href="/contact">Contact Us</Link></li>
                               </ul>
                            </div>
@@ -63,6 +64,9 @@ const FooterOne = () => {
                               <h4 className="mb-30 footer-title">Resources</h4>
                               <ul className="service-list">
                                  <li><Link href="/free-hail-report">Free Hail Report</Link></li>
+                                 <li><Link href="/industries-we-serve">Industries We Serve</Link></li>
+                                 <li><Link href="/resources/harbor-shield-360-insurance-pricing">Harbor Shield 360 – Insurance Agency Pricing</Link></li>
+                                 <li><Link href="/resources/toth-shield-consumer-pricing">Toth Shield – Consumer Pricing</Link></li>
                                  <li><Link href="/terms-of-services">Terms of Service</Link></li>
                                  <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                                  <li><Link href="/refund-cancellation-policy">Refund &amp; Cancellation</Link></li>
