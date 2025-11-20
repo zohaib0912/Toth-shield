@@ -435,11 +435,14 @@ const ShieldsPage = () => {
     const handleCheckout = async (planKey: string) => {
         try {
             setLoadingPlan(planKey);
-            const response = await fetch("/api/checkout", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ planKey }),
-            });
+            const response = await fetch(
+                `${process.env.NEXT_PUBLIC_BACKEND_URL}/checkout`,
+                {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ planKey }),
+                }
+              );
 
             if (!response.ok) {
                 throw new Error("Checkout failed");
