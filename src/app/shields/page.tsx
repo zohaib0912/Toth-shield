@@ -180,7 +180,7 @@ const ShieldsPage = () => {
             process.env.NEXT_PUBLIC_CUSTOMER_PLANS_URL ||
             process.env.NEXT_PUBLIC_BACKEND_URL ||
             process.env.NEXT_PUBLIC_API_BASE_URL ||
-            "https://app.stormbuddi.com/api";
+            "http://192.168.1.182:8000/api";
 
         if (/customer-subscription-plans\/?$/i.test(baseUrl)) {
             return baseUrl;
