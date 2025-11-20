@@ -12,7 +12,7 @@ const SUBSCRIPTION_ENDPOINT_CANDIDATES = [
     process.env.NEXT_PUBLIC_CUSTOMER_SUBSCRIPTIONS_URL,
     process.env.NEXT_PUBLIC_BACKEND_URL,
     process.env.NEXT_PUBLIC_API_BASE_URL,
-    "http://192.168.1.182:8000/",
+    "https://app.stormbuddi.com/",
 ] as const;
 
 const SUBSCRIPTION_PATH_REGEX = /customer-subscription-plans\/?$/i;
