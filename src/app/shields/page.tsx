@@ -30,6 +30,42 @@ interface ShieldPackage {
     popular?: boolean;
 }
 
+interface RemotePlanFeature {
+    feature_id?: number;
+    note?: string | null;
+    limit_value?: number | string | null;
+    is_included?: boolean | null;
+}
+
+interface RemotePlan {
+    id?: number;
+    name?: string | null;
+    title?: string | null;
+    plan_name?: string | null;
+    slug?: string | null;
+    key?: string | null;
+    plan_key?: string | null;
+    amount?: number | string | null;
+    price?: number | string | null;
+    price_value?: number | string | null;
+    amount_monthly?: number | string | null;
+    amount_annual?: number | string | null;
+    monthly_price?: number | string | null;
+    annual_price?: number | string | null;
+    billing_cycle?: string | null;
+    billingCycle?: string | null;
+    interval?: string | null;
+    frequency?: string | null;
+    cadence?: string | null;
+    features?: RemotePlanFeature[] | null;
+}
+
+type PlanBucketEntry = {
+    source: RemotePlan;
+    priceValue: number;
+    features?: RemotePlanFeature[];
+};
+
 const DEFAULT_SHIELD_PACKAGES: ShieldPackage[] = [
     {
         id: 1,
@@ -45,7 +81,7 @@ const DEFAULT_SHIELD_PACKAGES: ShieldPackage[] = [
             "On-Call Moisture Inspection",
         ],
         pricing: {
-            monthly: "$24.99/mo",
+            monthly: "$14.99/mo",
             annual: "$152.99/yr",
             savings: "Save $27",
         },
@@ -258,24 +294,15 @@ const ShieldsPage = () => {
                 }
                 const possibleCollections: unknown[] = [payload?.data, payload?.plans, payload?.result, payload];
                 const remotePlans =
-                    (possibleCollections.find((collection): collection is any[] => Array.isArray(collection)) as
-                        | any[]
+                    (possibleCollections.find((collection): collection is RemotePlan[] => Array.isArray(collection)) as
+                        | RemotePlan[]
                         | undefined) ?? [];
 
                 if (!Array.isArray(remotePlans) || remotePlans.length === 0) {
                     return;
                 }
 
-                const groupedPlans = remotePlans.reduce<
-                    Record<
-                        string,
-                        Array<{
-                            source: any;
-                            priceValue: number;
-                            features?: any[];
-                        }>
-                    >
-                >((acc, plan) => {
+                const groupedPlans = remotePlans.reduce<Record<string, PlanBucketEntry[]>>((acc, plan) => {
                     if (!plan) return acc;
 
                     const planIdentifier = plan.slug ?? plan.key ?? plan.plan_key ?? plan.name ?? plan.title ?? "";
@@ -349,6 +376,17 @@ const ShieldsPage = () => {
                             }
                         }
 
+                        const resolvedFeatures =
+                            featuresEntry?.features
+                                ?.map((feature): string | null => {
+                                    if (!feature || typeof feature.note !== "string") {
+                                        return null;
+                                    }
+                                    const trimmedNote = feature.note.trim();
+                                    return trimmedNote.length > 0 ? trimmedNote : null;
+                                })
+                                .filter((item): item is string => Boolean(item)) ?? null;
+
                         return {
                             ...pkg,
                             title:
@@ -370,17 +408,7 @@ const ShieldsPage = () => {
                                         ? formatPriceLabel(annualEntry.priceValue, "yr", pkg.pricing.annual)
                                         : pkg.pricing.annual,
                             },
-                            list:
-                                featuresEntry && Array.isArray(featuresEntry.features)
-                                    ? featuresEntry.features
-                                          .map((feature: any) => {
-                                              if (!feature || typeof feature.note !== "string") {
-                                                  return null;
-                                              }
-                                              return feature.note.trim();
-                                          })
-                                          .filter((item): item is string => Boolean(item))
-                                    : pkg.list,
+                            list: resolvedFeatures && resolvedFeatures.length > 0 ? resolvedFeatures : pkg.list,
                         };
                     })
                 );
