@@ -217,7 +217,7 @@ const TothShieldConsumerPricingPage = () => {
               </ul>
             </div>
 
-            <div className="tab-content mt-4 wow fadeInUp">
+            <div className="tab-content mt-4 ">
               <div className="row g-4 pricing-row">
                 {plans.map((plan, idx) => {
                   const pricing = activeTab === "affiliate" ? plan.affiliate : plan.direct;

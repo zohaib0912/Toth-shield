@@ -13,6 +13,28 @@ const BecomeAPro = () => {
     const router = useRouter();
     const [isMobile, setIsMobile] = useState(false);
     const [isLaptop, setIsLaptop] = useState(false);
+    const agencyBenefits = [
+        {
+            icon: "fa fa-cogs",
+            title: "Retention Engine",
+            description: "Stay in front of clients all year with meaningful, proactive touchpoints.",
+        },
+        {
+            icon: "fa fa-eye",
+            title: "Claims Visibility",
+            description: "Track incidents from first alert through resolution with a single dashboard.",
+        },
+        {
+            icon: "fa fa-dollar-sign",
+            title: "New Revenue Opportunities",
+            description: "Upsell premium protection, deductible financing, and vendor services.",
+        },
+        {
+            icon: "fa fa-star",
+            title: "Clear Differentiation",
+            description: "Offer what big-name carriers can’t: a fully branded protection platform.",
+        },
+    ];
 
     useEffect(() => {
         const handleResize = () => {
@@ -490,237 +512,101 @@ const BecomeAPro = () => {
                                 What Your Agency Gets Behind the Scenes
                             </h2>
                         </div>
-                        <div className="row g-4 position-relative" style={{ alignItems: 'stretch' }}>
-                            <div className="col-xxl-3 col-xl-3 col-lg-6 col-md-6 position-relative">
-                                <div className="team-area-box p-relative" style={{ 
-                                    backgroundColor: '#fff', 
-                                    
-                                    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-                                    padding: '30px',
-                                    height: '100%',
-                                    minHeight: '350px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    transition: 'none',
-                                    transform: 'none'
-                                }}>
-                                    <figure className="image w-img p-relative mb-20" style={{ textAlign: 'center' }}>
-                                        <div style={{ 
-                                            width: '120px', 
-                                            height: '120px', 
-                                            margin: '0 auto',
-                                          borderRadius: '50%',
-                                            border: '3px solid #ea1826',
+                        <div
+                            className="row g-4 position-relative"
+                            style={{
+                                alignItems: 'stretch',
+                                gap: isMobile ? '20px' : undefined,
+                                justifyContent: isMobile ? 'center' : undefined,
+                            }}
+                        >
+                            {agencyBenefits.map((benefit, index) => (
+                                <div key={benefit.title} className="col-xxl-3 col-xl-3 col-lg-6 col-md-6 position-relative">
+                                    <div
+                                        className="team-area-box p-relative"
+                                        style={{
+                                            backgroundColor: '#fff',
+                                            boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+                                            padding: isMobile ? '20px' : '30px',
+                                            height: isMobile ? 'auto' : '100%',
+                                            minHeight: isMobile ? 'auto' : '350px',
                                             display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            backgroundColor: '#fff'
-                                        }}>
-                                            <i className="fa fa-cogs" style={{ fontSize: '50px', color: '#ea1826' }}></i>
+                                            flexDirection: 'column',
+                                            alignItems: isMobile ? 'center' : 'stretch',
+                                            transition: 'none',
+                                            transform: 'none',
+                                            borderRadius: '16px',
+                                            border: isMobile ? '1px solid #f2f2f2' : 'none',
+                                        }}
+                                    >
+                                        <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                                            <div
+                                                style={{
+                                                    width: isMobile ? '80px' : '110px',
+                                                    height: isMobile ? '80px' : '110px',
+                                                    borderRadius: '50%',
+                                                    border: '3px solid #ea1826',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    backgroundColor: '#fff',
+                                                    marginBottom: isMobile ? '16px' : '20px',
+                                                }}
+                                            >
+                                                <i className={benefit.icon} style={{ fontSize: isMobile ? '34px' : '46px', color: '#ea1826' }}></i>
+                                            </div>
                                         </div>
-                                    </figure>
-                                    <div className="content" style={{ textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                        <div className="author-info" style={{ textAlign: 'center', width: '100%' }}>
-                                            <h5 className="mb-5" style={{ fontSize: '18px', fontWeight: 700, color: '#102039', textAlign: 'center' }}>
-                                                Retention <br /> Engine
+                                        <div
+                                            style={{
+                                                flexGrow: 1,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                alignItems: 'center',
+                                                justifyContent: 'flex-start',
+                                                textAlign: 'center',
+                                                width: '100%',
+                                            }}
+                                        >
+                                            <h5
+                                                style={{
+                                                    fontSize: isMobile ? '18px' : '19px',
+                                                    fontWeight: 700,
+                                                    color: '#102039',
+                                                    marginBottom: '10px',
+                                                }}
+                                            >
+                                                {benefit.title}
                                             </h5>
-                                            <span style={{ 
-                                                color: '#ea1826', 
-                                                fontSize: '14px',
-                                                fontWeight: 600,
-                                                display: 'block',
-                                                marginBottom: '10px',
-                                                borderBottom: '2px solid #ea1826',
-                                                paddingBottom: '5px',
-                                                width: 'fit-content',
-                                                margin: '0 auto 10px'
-                                            }}>
-                                                Stay in front of <br /> clients all year <br /> with meaningful,<br />  proactive touchpoints.
-                                            </span>
+                                            <p
+                                                style={{
+                                                    color: '#5f646d',
+                                                    fontSize: '15px',
+                                                    fontWeight: 500,
+                                                    lineHeight: 1.7,
+                                                    marginBottom: 0,
+                                                }}
+                                            >
+                                                {benefit.description}
+                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                                {/* Arrow */}
-                                <div className="d-none d-xxl-block" style={{ 
-                                    position: 'absolute',
-                                    right: '-20px',
-                                    top: '50%',
-                                    transform: 'translateY(-50%)',
-                                    zIndex: 10
-                                }}>
-                                    <i className="icon-right-arrow" style={{ fontSize: '30px', color: '#ea1826' }}></i>
-                                </div>
-                            </div>
-                            <div className="col-xxl-3 col-xl-3 col-lg-6 col-md-6 position-relative">
-                                <div className="team-area-box p-relative" style={{ 
-                                    backgroundColor: '#fff', 
-                                    
-                                    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-                                    padding: '30px',
-                                    height: '100%',
-                                    minHeight: '350px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    transition: 'none',
-                                    transform: 'none'
-                                }}>
-                                    <figure className="image w-img p-relative mb-20" style={{ textAlign: 'center' }}>
-                                        <div style={{ 
-                                            width: '120px', 
-                                            height: '120px', 
-                                            margin: '0 auto',
-                                            borderRadius: '50%',
-                                            border: '3px solid #ea1826',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            backgroundColor: '#fff'
-                                        }}>
-                                            <i className="fa fa-eye" style={{ fontSize: '50px', color: '#ea1826' }}></i>
+                                    {/* Arrow */}
+                                    {index !== agencyBenefits.length - 1 && (
+                                        <div
+                                            className="d-none d-xxl-block"
+                                            style={{
+                                                position: 'absolute',
+                                                right: '-20px',
+                                                top: '50%',
+                                                transform: 'translateY(-50%)',
+                                                zIndex: 10,
+                                            }}
+                                        >
+                                            <i className="icon-right-arrow" style={{ fontSize: '30px', color: '#ea1826' }}></i>
                                         </div>
-                                    </figure>
-                                    <div className="content" style={{ textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                        <div className="author-info" style={{ textAlign: 'center', width: '100%' }}>
-                                            <h5 className="mb-5" style={{ fontSize: '18px', fontWeight: 700, color: '#102039', textAlign: 'center' }}>
-                                                Claims <br /> Visibility
-                                            </h5>
-                                            <span style={{ 
-                                                color: '#ea1826', 
-                                                fontSize: '14px',
-                                                fontWeight: 600,
-                                                display: 'block',
-                                                marginBottom: '10px',
-                                                borderBottom: '2px solid #ea1826',
-                                                paddingBottom: '5px',
-                                                width: 'fit-content',
-                                                margin: '0 auto 10px'
-                                            }}>
-                                                Track incidents from <br /> first alert through <br /> resolution with <br /> a single dashboard.
-                                            </span>
-                                        </div>
-                                    </div>
+                                    )}
                                 </div>
-                                {/* Arrow */}
-                                <div className="d-none d-xxl-block" style={{ 
-                                    position: 'absolute',
-                                    right: '-20px',
-                                    top: '50%',
-                                    transform: 'translateY(-50%)',
-                                    zIndex: 10
-                                }}>
-                                    <i className="icon-right-arrow" style={{ fontSize: '30px', color: '#ea1826' }}></i>
-                                </div>
-                            </div>
-                            <div className="col-xxl-3 col-xl-3 col-lg-6 col-md-6 position-relative">
-                                <div className="team-area-box p-relative" style={{ 
-                                    backgroundColor: '#fff', 
-                                  
-                                    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-                                    padding: '30px',
-                                    height: '100%',
-                                    minHeight: '350px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    transition: 'none',
-                                    transform: 'none'
-                                }}>
-                                    <figure className="image w-img p-relative mb-20" style={{ textAlign: 'center' }}>
-                                        <div style={{ 
-                                            width: '120px', 
-                                            height: '120px', 
-                                            margin: '0 auto',
-                                            borderRadius: '50%',
-                                            border: '3px solid #ea1826',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            backgroundColor: '#fff'
-                                        }}>
-                                            <i className="fa fa-dollar-sign" style={{ fontSize: '50px', color: '#ea1826' }}></i>
-                                        </div>
-                                    </figure>
-                                    <div className="content" style={{ textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                        <div className="author-info" style={{ textAlign: 'center', width: '100%' }}>
-                                            <h5 className="mb-5" style={{ fontSize: '18px', fontWeight: 700, color: '#102039', textAlign: 'center' }}>
-                                                New Revenue Opportunities
-                                            </h5>
-                                            <span style={{ 
-                                                color: '#ea1826', 
-                                                fontSize: '14px',
-                                                fontWeight: 600,
-                                                display: 'block',
-                                                marginBottom: '10px',
-                                                borderBottom: '2px solid #ea1826',
-                                                paddingBottom: '5px',
-                                                width: 'fit-content',
-                                                margin: '0 auto 10px'
-                                            }}>
-                                                Upsell premium protection, deductible financing, and vendor services.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Arrow */}
-                                <div className="d-none d-xxl-block" style={{ 
-                                    position: 'absolute',
-                                    right: '-20px',
-                                    top: '50%',
-                                    transform: 'translateY(-50%)',
-                                    zIndex: 10
-                                }}>
-                                    <i className="icon-right-arrow" style={{ fontSize: '30px', color: '#ea1826' }}></i>
-                                </div>
-                            </div>
-                            <div className="col-xxl-3 col-xl-3 col-lg-6 col-md-6 position-relative">
-                                <div className="team-area-box p-relative" style={{ 
-                                    backgroundColor: '#fff', 
-                                  
-                                    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-                                    padding: '30px',
-                                    height: '100%',
-                                    minHeight: '350px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    transition: 'none',
-                                    transform: 'none'
-                                }}>
-                                    <figure className="image w-img p-relative mb-20" style={{ textAlign: 'center' }}>
-                                        <div style={{ 
-                                            width: '120px', 
-                                            height: '120px', 
-                                            margin: '0 auto',
-                                            borderRadius: '50%',
-                                            border: '3px solid #ea1826',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            backgroundColor: '#fff'
-                                        }}>
-                                            <i className="fa fa-star" style={{ fontSize: '50px', color: '#ea1826' }}></i>
-                                        </div>
-                                    </figure>
-                                    <div className="content" style={{ textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                        <div className="author-info" style={{ textAlign: 'center', width: '100%' }}>
-                                            <h5 className="mb-5" style={{ fontSize: '18px', fontWeight: 700, color: '#102039', textAlign: 'center' }}>
-                                                Clear Differentiation
-                                            </h5>
-                                            <span style={{ 
-                                                color: '#ea1826', 
-                                                fontSize: '14px',
-                                                fontWeight: 600,
-                                                display: 'block',
-                                                marginBottom: '10px',
-                                                borderBottom: '2px solid #ea1826',
-                                                paddingBottom: '5px',
-                                                width: 'fit-content',
-                                                margin: '0 auto 10px'
-                                            }}>
-                                                Offer something big-name carriers and direct writers don&rsquo;t: a branded protection platform.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -728,7 +614,7 @@ const BecomeAPro = () => {
                
 
                 {/* White-Label Branding Section */}
-                 <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
+                 <section className="section-space p-relative wow fadeInUp pt-5" >
                     <div className="small-container">
                     <div className="text-center mb-30">
                             <span className="section-sub-title" style={{ color: '#ea1826' }}>White Label Branding</span>
@@ -910,7 +796,7 @@ const BecomeAPro = () => {
                 </section>
 
                  {/* Emergency Button Flow Section */}
-                 <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
+                 <section className="section-space p-relative wow fadeInUp pt-0" >
                     <style dangerouslySetInnerHTML={{__html: `
                         .emergency-flow-section .work-process-box {
                             transition: none !important;
@@ -1151,7 +1037,7 @@ const BecomeAPro = () => {
                 </section>
 
                 {/* Pricing & ROI Section */}
-                <section className="section-space p-relative wow fadeInUp" style={{paddingTop: '0px !important', paddingBottom: '100px !important' }}>
+                <section className="section-space p-relative wow fadeInUp pt-0" >
                     <div className="small-container">
                         <div className="text-center mb-40">
                             <span className="section-sub-title" style={{ color: '#ea1826', textTransform: 'uppercase', letterSpacing: '1px' }}>Pricing & ROI</span>
@@ -1293,7 +1179,7 @@ const BecomeAPro = () => {
                 </section>
 
                 {/* Who It's For Section */}
-                <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '0px !important', paddingBottom: '100px !important' }}>
+                <section className="section-space p-relative wow fadeInUp pt-0" >
                     <div className="small-container">
                         <div className="text-center mb-50">
                             <span className="section-sub-title" style={{ color: '#ea1826', textTransform: 'uppercase', letterSpacing: '1px' }}>
@@ -1361,7 +1247,7 @@ const BecomeAPro = () => {
                 <Testimonial />
 
                 {/* Ecosystem & Integrations Section */}
-                <section className="section-space p-relative wow fadeInUp" style={{ paddingTop: '70px !important' , paddingBottom: '70px !important' }}>
+                <section className="section-space p-relative wow fadeInUp pb-0" >
                     <div className="small-container">
                         <div className="row align-items-center">
                             <div className="col-lg-7">
