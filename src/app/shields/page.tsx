@@ -432,35 +432,28 @@ const ShieldsPage = () => {
         };
     }, [subscriptionPlansUrl, formatPriceLabel, normalizePlanKey, parsePriceValue]);
 
-    const handleCheckout = async (planKey: string) => {
-        try {
-            setLoadingPlan(planKey);
-            const response = await fetch(
-                `/api/checkout`,
-                {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ planKey }),
-                }
-              );
+    const paymentLinks: Record<string, string> = {
+        bronzeMonthly: "https://link.fastpaydirect.com/payment-link/67fc9f2730cc7e7595468b36",
+        bronzeAnnual: "https://link.fastpaydirect.com/payment-link/68013cda41b3014a0c552a7c",
+        silverMonthly: "https://link.fastpaydirect.com/payment-link/67fc9db8fb737940e9aa56ec",
+        silverAnnual: "https://link.fastpaydirect.com/payment-link/68013c6c08e4880f24f561a9",
+        goldMonthly: "https://link.fastpaydirect.com/payment-link/67fc9e8908e488be75f5410e",
+        goldAnnual: "https://link.fastpaydirect.com/payment-link/68013c4608e48815a2f561a6",
+        platinumMonthly: "https://link.fastpaydirect.com/payment-link/67fca273fb7379e5adaa5711",
+        platinumAnnual: "https://link.fastpaydirect.com/payment-link/68013bd741b301e372552a66",
+    };
 
-            if (!response.ok) {
-                throw new Error("Checkout failed");
-            }
-
-            const { url } = await response.json();
-
-            if (!url) {
-                throw new Error("Stripe session missing URL");
-            }
-
-            window.location.href = url;
-        } catch (error) {
-            console.error(error);
-            alert("We couldn't start the checkout. Please try again.");
-        } finally {
-            setLoadingPlan(null);
+    const handleCheckout = (planKey: string) => {
+        const paymentUrl = paymentLinks[planKey];
+        
+        if (!paymentUrl) {
+            console.error(`No payment link found for plan: ${planKey}`);
+            alert("Payment link not available for this plan. Please try again.");
+            return;
         }
+
+        setLoadingPlan(planKey);
+        window.location.href = paymentUrl;
     };
 
     return (
